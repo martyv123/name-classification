@@ -12,29 +12,11 @@ import csv
 import country_converter
 from country_converter.country_converter import CountryConverter
 
-ETHNICITY_FILES = ["ethnicity_staff_intake/ethnicity_1_500.json",
-                   "ethnicity_staff_intake/ethnicity_501_1000.json",
-                   "ethnicity_staff_intake/ethnicity_1001_1500.json",
-                   "ethnicity_staff_intake/ethnicity_1501_2000.json",
-                   "ethnicity_staff_intake/ethnicity_2001_2500.json",
-                   "ethnicity_staff_intake/ethnicity_2501_3000.json",
-                   "ethnicity_staff_intake/ethnicity_3001_3500.json",
-                   "ethnicity_staff_intake/ethnicity_3501_3689.json"]
+ETHNICITY_FILES = ["ethnicity-march-june.json"]
 
-NATIONALITY_FILES = ["nationality_staff_intake/nationality_1_500.json",
-                     "nationality_staff_intake/nationality_501_1000.json",
-                     "nationality_staff_intake/nationality_1001_1500.json",
-                     "nationality_staff_intake/nationality_1501_2000.json",
-                     "nationality_staff_intake/nationality_2001_2500.json",
-                     "nationality_staff_intake/nationality_2501_3000.json",
-                     "nationality_staff_intake/nationality_3001_3500.json",
-                     "nationality_staff_intake/nationality_3501_3689.json"]
+NATIONALITY_FILES = ["nationality-march-june.json"]
 
-GENDER_FILES = ["genders_staff_intake/genders_1_500.json",
-                "genders_staff_intake/genders_501_1000.json",
-                "genders_staff_intake/genders_1001_2000.json",
-                "genders_staff_intake/genders_2001_3000.json",
-                "genders_staff_intake/genders_3001_3689.json"]
+GENDER_FILES = ["gender-march-june.json"]
 
 INDEX = 0
 
@@ -58,7 +40,7 @@ personalInfo = []
 
 # Parsing the given CSV name list of first and last names
 def parse_csv():
-  with open("staff_intake.csv", mode='r', encoding='utf-8') as csv_file:
+  with open("march-june.csv", mode='r', encoding='utf-8') as csv_file:
       csv_reader = csv.reader(csv_file)
 
       id = 0
